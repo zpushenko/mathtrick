@@ -20,12 +20,14 @@ def show_main_page():
 @app.route('/result', methods=['POST', 'GET'])
 def show_result():
 
-    list = ["арифметич.дії з дробами", "арифметичний квадратний корінь, його властивості", "квадратне рівняння",
-            "числові нерівності", "квадратична фунція", "арифметична і геометричная прогресії"]
+    if request.method == 'POST':
 
-    theme = list[4]
+        list = ["арифметич.дії з дробами", "арифметичний квадратний корінь, його властивості", "квадратне рівняння",
+                "числові нерівності", "квадратична фунція", "арифметична і геометричная прогресії"]
 
-    return render_template('page2.html', result=theme)
+        theme = list[4]
+
+        return render_template("page2.html", result=theme)
 
 
 if __name__ == '__main__':
