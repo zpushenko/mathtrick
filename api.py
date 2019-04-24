@@ -8,7 +8,7 @@ def show_main_page():
 
     text = request.form.get('studentText')
 
-    print(text) #выводит текст ученика
+    #print(text) #выводит текст ученика
 
     numberclass = request.form.get('studentClass')
 
