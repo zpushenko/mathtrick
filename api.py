@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 
+
 app = Flask(__name__)
 
 
@@ -7,8 +8,10 @@ app = Flask(__name__)
 def show_main_page():
 
     text = request.form.get('studentText')
+    count = len(text.split(' '))
+    print(count)
 
-    #print(text) #выводит текст ученика
+    print(text)  #выводит текст ученика
 
     numberclass = request.form.get('studentClass')
 
